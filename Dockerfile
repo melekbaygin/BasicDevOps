@@ -2,14 +2,14 @@
 FROM python:3.9-slim  
 
 # Çalışma dizinini belirle
-WORKDIR /app  
+WORKDIR /app
 
 # Bağımlılıkları yükle
-COPY requirements.txt requirements.txt  
-RUN pip install --no-cache-dir -r requirements.txt  
+COPY requirements.txt requirements.txt
+RUN pip install --no-cache-dir -r requirements.txt
 
 # Uygulama dosyalarını kopyala
-COPY . .  
+COPY . .
 
 # Container içinde uygulamayı çalıştır
 CMD ["python", "app.py"]
